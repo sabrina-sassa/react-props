@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import {ImgUrl,HandleName, Profile} from './profil/profile-component';
+import img from './user-icon.png'
 
 function App() {
+  const alertMyInput=fName=>alert(fName)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" >
+      <ImgUrl><img src={img} alt="" /></ImgUrl>
+      <Profile fullname="Lahouaoui Sabrina " bio="ddjffjhfkf" profession="IT"></Profile>
+      <HandleName alertMyInput={alertMyInput}/>
     </div>
   );
 }
